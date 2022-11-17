@@ -1,10 +1,10 @@
 <?php
 
-// TypeFilter.php
+// PdrbFilter.php
 
 namespace App\Filters;
 
-class TypeFilter
+class PdrbFilter
 {
     public function filter()
     {
