@@ -185,6 +185,8 @@ return [
         /*
          * Package Service Providers...
          */
+        EloquentFilter\ServiceProvider::class,
+        Krlove\EloquentModelGenerator\Provider\GeneratorServiceProvider::class,
 
         /*
          * Application Service Providers...

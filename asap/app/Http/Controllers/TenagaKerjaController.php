@@ -13,9 +13,9 @@ class TenagaKerjaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $tenagaKerja = TenagaKerja::all();
+        $tenagaKerja = TenagaKerja::filter($request->all())->get();
         return response()->json([
             'data' => $tenagaKerja
         ],200);

@@ -12,9 +12,9 @@ class PdrbController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $pdrb = Pdrb::all();
+        $pdrb = Pdrb::filter($request->all())->get();
         return response()->json([
             'data' => $pdrb
         ],200);
@@ -47,9 +47,17 @@ class PdrbController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Request $request)
     {
-        //
+        // $pdrb = Pdrb::all();
+        
+        // if ($request->has('kategori')){
+        //     $pdrb->where('kategori', $request->kategori);
+        // }
+        
+        // return response()->json([
+        //     'data' => $pdrb
+        // ],200);
     }
 
     /**

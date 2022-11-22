@@ -7,10 +7,12 @@
     "require": {
         "php": "^8.0.2",
         "guzzlehttp/guzzle": "^7.2",
+        "krlove/eloquent-model-generator": "*",
         "laravel/framework": "^9.19",
         "laravel/sanctum": "^3.0",
         "laravel/tinker": "^2.7",
-        "tcg/voyager": "^1.6"
+        "tcg/voyager": "^1.6",
+        "tucker-eric/eloquentfilter": "^3.1"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",

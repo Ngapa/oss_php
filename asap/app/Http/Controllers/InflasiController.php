@@ -12,9 +12,9 @@ class InflasiController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $inflasi = Inflasi::all();
+        $inflasi = Inflasi::filter($request->all())->get();
         return response()->json([
             'data' => $inflasi
         ],200);
