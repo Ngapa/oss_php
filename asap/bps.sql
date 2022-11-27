@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 26, 2022 at 07:22 PM
+-- Generation Time: Nov 27, 2022 at 03:57 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -178,31 +178,11 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (149, 17, 'total', 'number', 'Total', 0, 1, 1, 1, 1, 1, '{}', 6),
 (150, 17, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 7),
 (151, 17, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 8),
-(152, 18, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
-(153, 18, 'pddk', 'select_dropdown', 'Pddk', 0, 1, 1, 1, 1, 1, '{\"default\":\"rendah\",\"options\":{\"rendah\":\"Rendah\",\"sedang\":\"Sedang\",\"tinggi\":\"Tinggi\"}}', 2),
-(154, 18, 'jumlah', 'number', 'Jumlah', 0, 1, 1, 1, 1, 1, '{}', 3),
-(155, 18, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 4),
-(156, 18, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 5),
 (157, 19, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
 (158, 19, 'tpak', 'number', 'Tpak', 0, 1, 1, 1, 1, 1, '{}', 2),
 (159, 19, 'tpt', 'number', 'Tpt', 0, 1, 1, 1, 1, 1, '{}', 3),
 (160, 19, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 4),
 (161, 19, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 5),
-(162, 20, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
-(163, 20, 'kategori', 'select_dropdown', 'Kategori', 0, 1, 1, 1, 1, 1, '{\"default\":\"andil_inflasi\",\"options\":{\"andil_inflasi\":\"Andil Inflasi\",\"tingkat_inflasi\":\"Tingkat Inflasi\"}}', 2),
-(164, 20, 'sembako', 'number', 'Sembako', 0, 1, 1, 1, 1, 1, '{}', 3),
-(165, 20, 'sandang', 'number', 'Sandang', 0, 1, 1, 1, 1, 1, '{}', 4),
-(166, 20, 'perumahan', 'number', 'Perumahan', 0, 1, 1, 1, 1, 1, '{}', 5),
-(167, 20, 'kesehatan', 'number', 'Kesehatan', 0, 1, 1, 1, 1, 1, '{}', 6),
-(168, 20, 'transportasi', 'number', 'Transportasi', 0, 1, 1, 1, 1, 1, '{}', 7),
-(169, 20, 'informasi', 'number', 'Informasi', 0, 1, 1, 1, 1, 1, '{}', 8),
-(170, 20, 'rekreasi', 'text', 'Rekreasi', 0, 1, 1, 1, 1, 1, '{}', 9),
-(171, 20, 'pendidikan', 'number', 'Pendidikan', 0, 1, 1, 1, 1, 1, '{}', 10),
-(172, 20, 'penyedia_pangan', 'number', 'Penyedia Pangan', 0, 1, 1, 1, 1, 1, '{}', 11),
-(173, 20, 'perawatan_pribadi', 'number', 'Perawatan Pribadi', 0, 1, 1, 1, 1, 1, '{}', 12),
-(174, 20, 'total', 'number', 'Total', 0, 1, 1, 1, 1, 1, '{}', 13),
-(175, 20, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 14),
-(176, 20, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 15),
 (177, 21, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
 (178, 21, 'pddk_mskn', 'number', 'Pddk Mskn', 0, 1, 1, 1, 1, 1, '{}', 2),
 (179, 21, 'p0', 'number', 'P0', 0, 1, 1, 1, 1, 1, '{}', 3),
@@ -267,7 +247,30 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (238, 33, 'lk', 'number', 'Lk', 0, 1, 1, 1, 1, 1, '{}', 2),
 (239, 33, 'pr', 'number', 'Pr', 0, 1, 1, 1, 1, 1, '{}', 3),
 (240, 33, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 4),
-(241, 33, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 5);
+(241, 33, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 5),
+(242, 34, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
+(243, 34, 'kategori', 'select_dropdown', 'Kategori', 0, 1, 1, 1, 1, 1, '{\"default\":\"andil_inflasi\",\"option\":{\"andil_inflasi\":\"Andil Inflasi\",\"tingkat_inflasi\":\"Tingkat Inflasi\"}}', 2),
+(244, 34, 'sembako', 'number', 'Sembako', 0, 1, 1, 1, 1, 1, '{}', 3),
+(245, 34, 'sandang', 'number', 'Sandang', 0, 1, 1, 1, 1, 1, '{}', 4),
+(246, 34, 'perumahan', 'number', 'Perumahan', 0, 1, 1, 1, 1, 1, '{}', 5),
+(247, 34, 'perlengkapan', 'number', 'Perlengkapan', 0, 1, 1, 1, 1, 1, '{}', 6),
+(248, 34, 'kesehatan', 'number', 'Kesehatan', 0, 1, 1, 1, 1, 1, '{}', 7),
+(249, 34, 'transportasi', 'number', 'Transportasi', 0, 1, 1, 1, 1, 1, '{}', 8),
+(250, 34, 'informasi', 'number', 'Informasi', 0, 1, 1, 1, 1, 1, '{}', 9),
+(251, 34, 'rekreasi', 'number', 'Rekreasi', 0, 1, 1, 1, 1, 1, '{}', 10),
+(252, 34, 'pendidikan', 'number', 'Pendidikan', 0, 1, 1, 1, 1, 1, '{}', 11),
+(253, 34, 'penyedia_pangan', 'number', 'Penyedia Pangan', 0, 1, 1, 1, 1, 1, '{}', 12),
+(254, 34, 'perawatan_pribadi', 'number', 'Perawatan Pribadi', 0, 1, 1, 1, 1, 1, '{}', 13),
+(255, 34, 'total', 'number', 'Total', 0, 1, 1, 1, 1, 1, '{}', 14),
+(256, 34, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 15),
+(257, 34, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 16),
+(261, 35, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
+(262, 35, 'rendah', 'number', 'Rendah', 0, 1, 1, 1, 1, 1, '{}', 2),
+(263, 35, 'menengah', 'number', 'Menengah', 0, 1, 1, 1, 1, 1, '{}', 3),
+(264, 35, 'tinggi', 'number', 'Tinggi', 0, 1, 1, 1, 1, 1, '{}', 4),
+(265, 35, 'jumlah', 'number', 'Jumlah', 0, 1, 1, 1, 1, 1, '{}', 5),
+(266, 35, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 6),
+(267, 35, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 7);
 
 -- --------------------------------------------------------
 
@@ -310,9 +313,7 @@ INSERT INTO `data_types` (`id`, `name`, `slug`, `display_name_singular`, `displa
 (15, 'penduduks', 'penduduks', 'Penduduk', 'Penduduk', 'voyager-people', 'App\\Models\\Penduduk', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null}', '2022-11-09 06:34:35', '2022-11-09 06:34:35'),
 (16, 'penduduk_kecamatans', 'penduduk-kecamatans', 'Penduduk Kecamatan', 'Penduduk Kecamatan', 'voyager-people', 'App\\Models\\PendudukKecamatan', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null}', '2022-11-09 06:44:42', '2022-11-09 06:44:42'),
 (17, 'inflasi_kotas', 'inflasi-kotas', 'Inflasi Kota', 'Inflasi Kota', 'voyager-dollar', 'App\\Models\\InflasiKota', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null}', '2022-11-09 06:51:43', '2022-11-09 06:51:43'),
-(18, 'ketimpangans', 'ketimpangans', 'Ketimpangan', 'Ketimpangan', 'voyager-params', 'App\\Models\\Ketimpangan', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null}', '2022-11-09 06:53:55', '2022-11-09 06:53:55'),
 (19, 'penganggurans', 'penganggurans', 'Pengangguran', 'Pengangguran', 'voyager-person', 'App\\Models\\Pengangguran', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null}', '2022-11-09 06:55:12', '2022-11-09 06:55:12'),
-(20, 'inflasis', 'inflasis', 'Inflasi', 'Inflasi', 'voyager-dollar', 'App\\Models\\Inflasi', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null}', '2022-11-09 21:46:59', '2022-11-09 21:46:59'),
 (21, 'pddk_mskns', 'pddk-mskns', 'Kemiskinan', 'Kemiskinan', 'voyager-people', 'App\\Models\\PddkMskn', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null}', '2022-11-09 22:47:00', '2022-11-09 22:47:00'),
 (22, 'bkn_ang_kerja', 'bkn-ang-kerja', 'Bukan Angkatan Kerja', 'Bukan Angkatan Kerja', 'voyager-archive', 'App\\Models\\BknAngKerja', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2022-11-26 09:11:13', '2022-11-26 09:19:30'),
 (25, 'pddk_kerja_pendidikans', 'pddk-kerja-pendidikans', 'Penduduk Kerja Berdasarkan Pendidikan', 'Penduduk Kerja Berdasarkan Pendidikan', 'voyager-person', 'App\\Models\\PddkKerjaPendidikan', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null}', '2022-11-26 09:14:26', '2022-11-26 09:14:26'),
@@ -322,7 +323,9 @@ INSERT INTO `data_types` (`id`, `name`, `slug`, `display_name_singular`, `displa
 (30, 'tkk_jk', 'tkk-jk', 'Tingkat Kesempatan Kerja', 'Tingkat Kesempatan Kerja', 'voyager-archive', 'App\\Models\\TkkJk', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null}', '2022-11-26 09:17:47', '2022-11-26 09:17:47'),
 (31, 'sensus_pddks', 'sensus-pddks', 'Sensus Penduduk', 'Sensus Penduduk', 'voyager-people', 'App\\Models\\SensusPddk', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null}', '2022-11-26 09:19:08', '2022-11-26 09:19:08'),
 (32, 'bkn_ang_kerjas', 'bkn-ang-kerjas', 'Bkn Ang Kerja', 'Bukan Angkatan Kerja', 'voyager-people', 'App\\Models\\BknAngKerja', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null}', '2022-11-26 09:26:24', '2022-11-26 09:26:24'),
-(33, 'tkk_jks', 'tkk-jks', 'Tkk Jk', 'Tingkat Kesempatan Kerja', 'voyager-person', 'App\\Models\\TkkJk', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null}', '2022-11-26 10:56:15', '2022-11-26 10:56:15');
+(33, 'tkk_jks', 'tkk-jks', 'Tkk Jk', 'Tingkat Kesempatan Kerja', 'voyager-person', 'App\\Models\\TkkJk', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null}', '2022-11-26 10:56:15', '2022-11-26 10:56:15'),
+(34, 'inflasis', 'inflasis', 'Inflasi', 'Inflasis', NULL, 'App\\Models\\Inflasi', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null}', '2022-11-27 07:20:36', '2022-11-27 07:20:36'),
+(35, 'ketimpangans', 'ketimpangans', 'Ketimpangan', 'Ketimpangans', NULL, 'App\\Models\\Ketimpangan', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null}', '2022-11-27 07:36:17', '2022-11-27 07:36:17');
 
 -- --------------------------------------------------------
 
@@ -352,7 +355,7 @@ CREATE TABLE `inflasis` (
   `sembako` double DEFAULT NULL,
   `sandang` double DEFAULT NULL,
   `perumahan` double DEFAULT NULL,
-  `perlengkapan` double NOT NULL,
+  `perlengkapan` double DEFAULT NULL,
   `kesehatan` double DEFAULT NULL,
   `transportasi` double DEFAULT NULL,
   `informasi` double DEFAULT NULL,
@@ -360,7 +363,7 @@ CREATE TABLE `inflasis` (
   `pendidikan` double DEFAULT NULL,
   `penyedia_pangan` double DEFAULT NULL,
   `perawatan_pribadi` double DEFAULT NULL,
-  `total` int(11) DEFAULT NULL,
+  `total` double DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -439,6 +442,13 @@ CREATE TABLE `ketimpangans` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `ketimpangans`
+--
+
+INSERT INTO `ketimpangans` (`id`, `rendah`, `menengah`, `tinggi`, `jumlah`, `created_at`, `updated_at`) VALUES
+(4, 1, 1, 2, 3, '2022-11-08 07:33:00', '2022-11-27 07:33:55');
+
 -- --------------------------------------------------------
 
 --
@@ -490,7 +500,7 @@ INSERT INTO `menu_items` (`id`, `menu_id`, `title`, `url`, `target`, `icon_class
 (2, 1, 'Media', '', '_self', 'voyager-images', NULL, NULL, 5, '2022-11-09 04:31:55', '2022-11-26 09:26:56', 'voyager.media.index', NULL),
 (3, 1, 'Users', '', '_self', 'voyager-person', NULL, NULL, 4, '2022-11-09 04:31:55', '2022-11-26 09:23:13', 'voyager.users.index', NULL),
 (4, 1, 'Roles', '', '_self', 'voyager-lock', NULL, NULL, 3, '2022-11-09 04:31:55', '2022-11-09 21:47:57', 'voyager.roles.index', NULL),
-(5, 1, 'Tools', '', '_self', 'voyager-tools', NULL, NULL, 7, '2022-11-09 04:31:55', '2022-11-26 09:26:56', NULL, NULL),
+(5, 1, 'Tools', '', '_self', 'voyager-tools', NULL, NULL, 7, '2022-11-09 04:31:55', '2022-11-27 07:38:13', NULL, NULL),
 (6, 1, 'Menu Builder', '', '_self', 'voyager-list', NULL, 5, 5, '2022-11-09 04:31:55', '2022-11-26 09:22:58', 'voyager.menus.index', NULL),
 (7, 1, 'Database', '', '_self', 'voyager-data', NULL, 5, 1, '2022-11-09 04:31:55', '2022-11-26 09:22:58', 'voyager.database.index', NULL),
 (8, 1, 'Compass', '', '_self', 'voyager-compass', NULL, 5, 3, '2022-11-09 04:31:55', '2022-11-26 09:22:58', 'voyager.compass.index', NULL),
@@ -498,24 +508,23 @@ INSERT INTO `menu_items` (`id`, `menu_id`, `title`, `url`, `target`, `icon_class
 (10, 1, 'Settings', '', '_self', 'voyager-settings', NULL, 5, 2, '2022-11-09 04:31:55', '2022-11-26 09:22:58', 'voyager.settings.index', NULL),
 (13, 1, 'Pages', '', '_self', 'voyager-file-text', NULL, NULL, 6, '2022-11-09 04:31:56', '2022-11-26 09:26:56', 'voyager.pages.index', NULL),
 (18, 1, 'Data Input', '', '_self', 'voyager-news', '#000000', NULL, 2, '2022-11-09 05:12:31', '2022-11-09 05:15:23', NULL, ''),
-(19, 1, 'Ipm', '', '_self', 'voyager-bar-chart', '#000000', 18, 4, '2022-11-09 05:18:52', '2022-11-26 09:27:02', 'voyager.ipms.index', NULL),
-(21, 1, 'Tenaga Kerja', '', '_self', 'voyager-archive', NULL, 18, 15, '2022-11-09 05:56:47', '2022-11-26 09:26:58', 'voyager.tenaga-kerjas.index', NULL),
-(22, 1, 'PDRB', '', '_self', 'voyager-data', '#000000', 18, 13, '2022-11-09 06:14:13', '2022-11-26 09:26:58', 'voyager.pdrbs.index', 'null'),
-(24, 1, 'Penduduk', '', '_self', 'voyager-people', NULL, 18, 7, '2022-11-09 06:34:35', '2022-11-26 09:27:02', 'voyager.penduduks.index', NULL),
-(25, 1, 'Penduduk Kecamatan', '', '_self', 'voyager-people', NULL, 18, 8, '2022-11-09 06:44:42', '2022-11-26 09:27:03', 'voyager.penduduk-kecamatans.index', NULL),
-(26, 1, 'Inflasi Kota', '', '_self', 'voyager-dollar', NULL, 18, 3, '2022-11-09 06:51:43', '2022-11-26 09:27:04', 'voyager.inflasi-kotas.index', NULL),
-(27, 1, 'Ketimpangan', '', '_self', 'voyager-params', NULL, 18, 5, '2022-11-09 06:53:55', '2022-11-26 09:27:02', 'voyager.ketimpangans.index', NULL),
-(28, 1, 'Pengangguran', '', '_self', 'voyager-person', NULL, 18, 12, '2022-11-09 06:55:12', '2022-11-26 09:26:58', 'voyager.penganggurans.index', NULL),
-(29, 1, 'Inflasi', '', '_self', 'voyager-dollar', NULL, 18, 2, '2022-11-09 21:47:01', '2022-11-26 09:27:04', 'voyager.inflasis.index', NULL),
-(30, 1, 'Kemiskinan', '', '_self', 'voyager-people', NULL, 18, 6, '2022-11-09 22:47:00', '2022-11-26 09:27:02', 'voyager.pddk-mskns.index', NULL),
-(32, 1, 'Penduduk Kerja Berdasarkan Pendidikan', '', '_self', 'voyager-person', NULL, 18, 9, '2022-11-26 09:14:27', '2022-11-26 09:27:00', 'voyager.pddk-kerja-pendidikans.index', NULL),
-(33, 1, 'Penduduk Kerja Lapangan Berdasarkan Pekerjaan Utama', '', '_self', 'voyager-people', '#000000', 18, 10, '2022-11-26 09:15:03', '2022-11-26 09:27:00', 'voyager.pddk-kerja-lpus.index', 'null'),
-(34, 1, 'Penduduk Kerja Berdasarkan Umur', '', '_self', 'voyager-people', '#000000', 18, 11, '2022-11-26 09:16:03', '2022-11-26 09:27:00', 'voyager.pddk-kerja-umurs.index', 'null'),
-(35, 1, 'Tingkat Pengangguran Terbuka', '', '_self', 'voyager-person', NULL, 18, 17, '2022-11-26 09:16:31', '2022-11-26 09:26:56', 'voyager.tingkat-pengangguran-terbukas.index', NULL),
-(36, 1, 'Tingkat Kesempatan Kerja', '', '_self', 'voyager-archive', NULL, 18, 16, '2022-11-26 09:17:47', '2022-11-26 09:26:58', 'voyager.tkk-jk.index', NULL),
-(37, 1, 'Sensus Penduduk', '', '_self', 'voyager-people', NULL, 18, 14, '2022-11-26 09:19:08', '2022-11-26 09:26:58', 'voyager.sensus-pddks.index', NULL),
+(19, 1, 'Ipm', '', '_self', 'voyager-bar-chart', '#000000', 18, 4, '2022-11-09 05:18:52', '2022-11-27 07:38:21', 'voyager.ipms.index', NULL),
+(21, 1, 'Tenaga Kerja', '', '_self', 'voyager-archive', NULL, 18, 15, '2022-11-09 05:56:47', '2022-11-27 07:38:14', 'voyager.tenaga-kerjas.index', NULL),
+(22, 1, 'PDRB', '', '_self', 'voyager-data', '#000000', 18, 13, '2022-11-09 06:14:13', '2022-11-27 07:38:14', 'voyager.pdrbs.index', 'null'),
+(24, 1, 'Penduduk', '', '_self', 'voyager-people', NULL, 18, 7, '2022-11-09 06:34:35', '2022-11-27 07:38:21', 'voyager.penduduks.index', NULL),
+(25, 1, 'Penduduk Kecamatan', '', '_self', 'voyager-people', NULL, 18, 8, '2022-11-09 06:44:42', '2022-11-27 07:38:17', 'voyager.penduduk-kecamatans.index', NULL),
+(26, 1, 'Inflasi Kota', '', '_self', 'voyager-dollar', NULL, 18, 3, '2022-11-09 06:51:43', '2022-11-27 07:38:21', 'voyager.inflasi-kotas.index', NULL),
+(28, 1, 'Pengangguran', '', '_self', 'voyager-person', NULL, 18, 12, '2022-11-09 06:55:12', '2022-11-27 07:38:17', 'voyager.penganggurans.index', NULL),
+(30, 1, 'Kemiskinan', '', '_self', 'voyager-people', NULL, 18, 5, '2022-11-09 22:47:00', '2022-11-27 07:38:21', 'voyager.pddk-mskns.index', NULL),
+(32, 1, 'Penduduk Kerja Berdasarkan Pendidikan', '', '_self', 'voyager-person', NULL, 18, 9, '2022-11-26 09:14:27', '2022-11-27 07:38:17', 'voyager.pddk-kerja-pendidikans.index', NULL),
+(33, 1, 'Penduduk Kerja Lapangan Berdasarkan Pekerjaan Utama', '', '_self', 'voyager-people', '#000000', 18, 10, '2022-11-26 09:15:03', '2022-11-27 07:38:17', 'voyager.pddk-kerja-lpus.index', 'null'),
+(34, 1, 'Penduduk Kerja Berdasarkan Umur', '', '_self', 'voyager-people', '#000000', 18, 11, '2022-11-26 09:16:03', '2022-11-27 07:38:17', 'voyager.pddk-kerja-umurs.index', 'null'),
+(35, 1, 'Tingkat Pengangguran Terbuka', '', '_self', 'voyager-person', NULL, 18, 17, '2022-11-26 09:16:31', '2022-11-27 07:38:13', 'voyager.tingkat-pengangguran-terbukas.index', NULL),
+(37, 1, 'Sensus Penduduk', '', '_self', 'voyager-people', NULL, 18, 14, '2022-11-26 09:19:08', '2022-11-27 07:38:14', 'voyager.sensus-pddks.index', NULL),
 (38, 1, 'Bukan Angkatan Kerja', '', '_self', 'voyager-people', NULL, 18, 1, '2022-11-26 09:26:25', '2022-11-26 09:27:03', 'voyager.bkn-ang-kerjas.index', NULL),
-(39, 1, 'Tingkat Kesempatan Kerja', '', '_self', 'voyager-person', NULL, NULL, 8, '2022-11-26 10:56:16', '2022-11-26 10:56:16', 'voyager.tkk-jks.index', NULL);
+(39, 1, 'Tingkat Kesempatan Kerja', '', '_self', 'voyager-person', NULL, 18, 16, '2022-11-26 10:56:16', '2022-11-27 07:38:14', 'voyager.tkk-jks.index', NULL),
+(40, 1, 'Inflasi', '', '_self', 'voyager-news', '#000000', 18, 2, '2022-11-27 07:20:36', '2022-11-27 07:38:27', 'voyager.inflasis.index', 'null'),
+(41, 1, 'Ketimpangan', '', '_self', 'voyager-bar-chart', '#000000', 18, 6, '2022-11-27 07:36:17', '2022-11-27 07:38:38', 'voyager.ketimpangans.index', 'null');
 
 -- --------------------------------------------------------
 
@@ -875,21 +884,11 @@ INSERT INTO `permissions` (`id`, `key`, `table_name`, `created_at`, `updated_at`
 (83, 'edit_inflasi_kotas', 'inflasi_kotas', '2022-11-09 06:51:43', '2022-11-09 06:51:43'),
 (84, 'add_inflasi_kotas', 'inflasi_kotas', '2022-11-09 06:51:43', '2022-11-09 06:51:43'),
 (85, 'delete_inflasi_kotas', 'inflasi_kotas', '2022-11-09 06:51:43', '2022-11-09 06:51:43'),
-(86, 'browse_ketimpangans', 'ketimpangans', '2022-11-09 06:53:55', '2022-11-09 06:53:55'),
-(87, 'read_ketimpangans', 'ketimpangans', '2022-11-09 06:53:55', '2022-11-09 06:53:55'),
-(88, 'edit_ketimpangans', 'ketimpangans', '2022-11-09 06:53:55', '2022-11-09 06:53:55'),
-(89, 'add_ketimpangans', 'ketimpangans', '2022-11-09 06:53:55', '2022-11-09 06:53:55'),
-(90, 'delete_ketimpangans', 'ketimpangans', '2022-11-09 06:53:55', '2022-11-09 06:53:55'),
 (91, 'browse_penganggurans', 'penganggurans', '2022-11-09 06:55:12', '2022-11-09 06:55:12'),
 (92, 'read_penganggurans', 'penganggurans', '2022-11-09 06:55:12', '2022-11-09 06:55:12'),
 (93, 'edit_penganggurans', 'penganggurans', '2022-11-09 06:55:12', '2022-11-09 06:55:12'),
 (94, 'add_penganggurans', 'penganggurans', '2022-11-09 06:55:12', '2022-11-09 06:55:12'),
 (95, 'delete_penganggurans', 'penganggurans', '2022-11-09 06:55:12', '2022-11-09 06:55:12'),
-(96, 'browse_inflasis', 'inflasis', '2022-11-09 21:47:00', '2022-11-09 21:47:00'),
-(97, 'read_inflasis', 'inflasis', '2022-11-09 21:47:00', '2022-11-09 21:47:00'),
-(98, 'edit_inflasis', 'inflasis', '2022-11-09 21:47:00', '2022-11-09 21:47:00'),
-(99, 'add_inflasis', 'inflasis', '2022-11-09 21:47:00', '2022-11-09 21:47:00'),
-(100, 'delete_inflasis', 'inflasis', '2022-11-09 21:47:00', '2022-11-09 21:47:00'),
 (101, 'browse_pddk_mskns', 'pddk_mskns', '2022-11-09 22:47:00', '2022-11-09 22:47:00'),
 (102, 'read_pddk_mskns', 'pddk_mskns', '2022-11-09 22:47:00', '2022-11-09 22:47:00'),
 (103, 'edit_pddk_mskns', 'pddk_mskns', '2022-11-09 22:47:00', '2022-11-09 22:47:00'),
@@ -939,7 +938,17 @@ INSERT INTO `permissions` (`id`, `key`, `table_name`, `created_at`, `updated_at`
 (147, 'read_tkk_jks', 'tkk_jks', '2022-11-26 10:56:16', '2022-11-26 10:56:16'),
 (148, 'edit_tkk_jks', 'tkk_jks', '2022-11-26 10:56:16', '2022-11-26 10:56:16'),
 (149, 'add_tkk_jks', 'tkk_jks', '2022-11-26 10:56:16', '2022-11-26 10:56:16'),
-(150, 'delete_tkk_jks', 'tkk_jks', '2022-11-26 10:56:16', '2022-11-26 10:56:16');
+(150, 'delete_tkk_jks', 'tkk_jks', '2022-11-26 10:56:16', '2022-11-26 10:56:16'),
+(151, 'browse_inflasis', 'inflasis', '2022-11-27 07:20:36', '2022-11-27 07:20:36'),
+(152, 'read_inflasis', 'inflasis', '2022-11-27 07:20:36', '2022-11-27 07:20:36'),
+(153, 'edit_inflasis', 'inflasis', '2022-11-27 07:20:36', '2022-11-27 07:20:36'),
+(154, 'add_inflasis', 'inflasis', '2022-11-27 07:20:36', '2022-11-27 07:20:36'),
+(155, 'delete_inflasis', 'inflasis', '2022-11-27 07:20:36', '2022-11-27 07:20:36'),
+(156, 'browse_ketimpangans', 'ketimpangans', '2022-11-27 07:36:17', '2022-11-27 07:36:17'),
+(157, 'read_ketimpangans', 'ketimpangans', '2022-11-27 07:36:17', '2022-11-27 07:36:17'),
+(158, 'edit_ketimpangans', 'ketimpangans', '2022-11-27 07:36:17', '2022-11-27 07:36:17'),
+(159, 'add_ketimpangans', 'ketimpangans', '2022-11-27 07:36:17', '2022-11-27 07:36:17'),
+(160, 'delete_ketimpangans', 'ketimpangans', '2022-11-27 07:36:17', '2022-11-27 07:36:17');
 
 -- --------------------------------------------------------
 
@@ -1027,21 +1036,11 @@ INSERT INTO `permission_role` (`permission_id`, `role_id`) VALUES
 (83, 1),
 (84, 1),
 (85, 1),
-(86, 1),
-(87, 1),
-(88, 1),
-(89, 1),
-(90, 1),
 (91, 1),
 (92, 1),
 (93, 1),
 (94, 1),
 (95, 1),
-(96, 1),
-(97, 1),
-(98, 1),
-(99, 1),
-(100, 1),
 (101, 1),
 (102, 1),
 (103, 1),
@@ -1091,7 +1090,17 @@ INSERT INTO `permission_role` (`permission_id`, `role_id`) VALUES
 (147, 1),
 (148, 1),
 (149, 1),
-(150, 1);
+(150, 1),
+(151, 1),
+(152, 1),
+(153, 1),
+(154, 1),
+(155, 1),
+(156, 1),
+(157, 1),
+(158, 1),
+(159, 1),
+(160, 1);
 
 -- --------------------------------------------------------
 
@@ -1575,13 +1584,13 @@ ALTER TABLE `bkn_ang_kerjas`
 -- AUTO_INCREMENT for table `data_rows`
 --
 ALTER TABLE `data_rows`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=242;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=268;
 
 --
 -- AUTO_INCREMENT for table `data_types`
 --
 ALTER TABLE `data_types`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -1611,7 +1620,7 @@ ALTER TABLE `ipms`
 -- AUTO_INCREMENT for table `ketimpangans`
 --
 ALTER TABLE `ketimpangans`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `menus`
@@ -1623,7 +1632,7 @@ ALTER TABLE `menus`
 -- AUTO_INCREMENT for table `menu_items`
 --
 ALTER TABLE `menu_items`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 
 --
 -- AUTO_INCREMENT for table `migrations`
@@ -1689,7 +1698,7 @@ ALTER TABLE `penganggurans`
 -- AUTO_INCREMENT for table `permissions`
 --
 ALTER TABLE `permissions`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=151;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=161;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`
