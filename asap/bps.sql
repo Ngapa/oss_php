@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 17, 2022 at 05:34 AM
+-- Generation Time: Nov 26, 2022 at 07:22 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -20,6 +20,23 @@ SET time_zone = "+00:00";
 --
 -- Database: `bps`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bkn_ang_kerjas`
+--
+
+CREATE TABLE `bkn_ang_kerjas` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `gender` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `sekolah` double DEFAULT NULL,
+  `urus_ruta` double DEFAULT NULL,
+  `lainnya` double DEFAULT NULL,
+  `jumlah` double DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -104,7 +121,7 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (76, 12, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 12),
 (77, 12, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 13),
 (78, 13, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
-(79, 13, 'kategori', 'select_dropdown', 'Kategori', 0, 1, 1, 1, 1, 1, '{\"default\":\"migas\",\"options\":{\"migas\":\"Migas\",\"non_migas\":\"Non Migas\",\"dist_migas\":\"Distribusi Migas\",\"dist_non_migas\":\"Distribusi Non Migas\",\"pert_migas\":\"Pertumbuhan Migas\",\"pert_non_migas\":\"Pertumbuhan Non Migas\"}}', 2),
+(79, 13, 'kategori', 'select_dropdown', 'Kategori', 0, 1, 1, 1, 1, 1, '{\"default\":\"adhb_migas\",\"options\":{\"adhb_migas\":\"ADHB Migas\",\"adhb_non_migas\":\"ADHB Non Migas\",\"adhk_migas\":\"ADHK Migas\",\"adhk_non_migas\":\"ADHK Non Migas\",\"dist_adhb_migas\":\"Distribusi ADHB Migas\",\"dist_adbh_non_migas\":\"Distribusi ADHB Non Migas\",\"dist_adhk_migas\":\"Distribusi ADHK Migas\",\"dist_adbk_non_migas\":\"Distribusi ADHK Non Migas\",\"pert_adhk_migas\":\"Pertumbuhan ADHK Migas\",\"pert_adhk_non_migas\":\"Pertumbuhan ADHK Non Migas\"}}', 2),
 (80, 13, 'a', 'number', 'A', 0, 1, 1, 1, 1, 1, '{}', 3),
 (81, 13, 'b', 'number', 'B', 0, 1, 1, 1, 1, 1, '{}', 4),
 (82, 13, 'c', 'number', 'C', 0, 1, 1, 1, 1, 1, '{}', 5),
@@ -193,7 +210,64 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (181, 21, 'p2', 'number', 'P2', 0, 1, 1, 1, 1, 1, '{}', 5),
 (182, 21, 'gk', 'number', 'Gk', 0, 1, 1, 1, 1, 1, '{}', 6),
 (183, 21, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 1, 1, '{}', 7),
-(184, 21, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 8);
+(184, 21, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 8),
+(185, 25, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
+(186, 25, 'gender', 'select_dropdown', 'Gender', 0, 1, 1, 1, 1, 1, '{\"default\":\"lk\",\"option\":{\"lk\":\"Laki-Laki\",\"pr\":\"Perempuan\"}}', 2),
+(187, 25, 'sd', 'number', 'Sd', 0, 1, 1, 1, 1, 1, '{}', 3),
+(188, 25, 'smp', 'number', 'Smp', 0, 1, 1, 1, 1, 1, '{}', 4),
+(189, 25, 'sma', 'number', 'Sma', 0, 1, 1, 1, 1, 1, '{}', 5),
+(190, 25, 'perguruan_tinggi', 'number', 'Perguruan Tinggi', 0, 1, 1, 1, 1, 1, '{}', 6),
+(191, 25, 'jumlah', 'number', 'Jumlah', 0, 1, 1, 1, 1, 1, '{}', 7),
+(192, 25, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 8),
+(193, 25, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 9),
+(194, 26, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
+(195, 26, 'gender', 'select_dropdown', 'Gender', 0, 1, 1, 1, 1, 1, '{\"default\":\"lk\",\"option\":{\"lk\":\"Laki-Laki\",\"pr\":\"Perempuan\"}}', 2),
+(196, 26, 'pertanian', 'number', 'Pertanian', 0, 1, 1, 1, 1, 1, '{}', 3),
+(197, 26, 'industri', 'number', 'Industri', 0, 1, 1, 1, 1, 1, '{}', 4),
+(198, 26, 'jasa', 'number', 'Jasa', 0, 1, 1, 1, 1, 1, '{}', 5),
+(199, 26, 'jumlah', 'number', 'Jumlah', 0, 1, 1, 1, 1, 1, '{}', 6),
+(200, 26, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 7),
+(201, 26, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 8),
+(202, 28, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
+(203, 28, 'gender', 'select_dropdown', 'Gender', 0, 1, 1, 1, 1, 1, '{\"default\":\"lk\",\"option\":{\"lk\":\"Laki-Laki\",\"pr\":\"Perempuan\"}}', 2),
+(204, 28, 'a', 'number', 'A', 0, 1, 1, 1, 1, 1, '{}', 3),
+(205, 28, 'b', 'number', 'B', 0, 1, 1, 1, 1, 1, '{}', 4),
+(206, 28, 'c', 'number', 'C', 0, 1, 1, 1, 1, 1, '{}', 5),
+(207, 28, 'total', 'number', 'Total', 0, 1, 1, 1, 1, 1, '{}', 6),
+(208, 28, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 7),
+(209, 28, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 8),
+(210, 29, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
+(211, 29, 'lk', 'number', 'Lk', 0, 1, 1, 1, 1, 1, '{}', 2),
+(212, 29, 'pr', 'number', 'Pr', 0, 1, 1, 1, 1, 1, '{}', 3),
+(213, 29, 'jumlah', 'number', 'Jumlah', 0, 1, 1, 1, 1, 1, '{}', 4),
+(214, 29, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 5),
+(215, 29, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 6),
+(216, 31, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
+(217, 31, 'kategori', 'select_dropdown', 'Kategori', 0, 1, 1, 1, 1, 1, '{\"default\":\"lk\",\"option\":{\"kab\":\"Kabupaten\",\"prov\":\"Provinsi\",\"nas\":\"Nasional\"}}', 2),
+(218, 31, 'lk', 'number', 'Lk', 0, 1, 1, 1, 1, 1, '{}', 3),
+(219, 31, 'pr', 'number', 'Pr', 0, 1, 1, 1, 1, 1, '{}', 4),
+(220, 31, 'jumlah', 'number', 'Jumlah', 0, 1, 1, 1, 1, 1, '{}', 5),
+(221, 31, 'post_gen_z', 'number', 'Post Gen Z', 0, 1, 1, 1, 1, 1, '{}', 6),
+(222, 31, 'gen_z', 'number', 'Gen Z', 0, 1, 1, 1, 1, 1, '{}', 7),
+(223, 31, 'milenial', 'number', 'Milenial', 0, 1, 1, 1, 1, 1, '{}', 8),
+(224, 31, 'gen_x', 'number', 'Gen X', 0, 1, 1, 1, 1, 1, '{}', 9),
+(225, 31, 'baby_boomer', 'number', 'Baby Boomer', 0, 1, 1, 1, 1, 1, '{}', 10),
+(226, 31, 'pre_boomer', 'number', 'Pre Boomer', 0, 1, 1, 1, 1, 1, '{}', 11),
+(227, 31, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 12),
+(228, 31, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 13),
+(229, 32, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
+(230, 32, 'gender', 'select_dropdown', 'Gender', 0, 1, 1, 1, 1, 1, '{\"default\":\"lk\",\"option\":{\"lk\":\"Laki-Laki\",\"pr\":\"Perempuan\"}}', 2),
+(231, 32, 'sekolah', 'number', 'Sekolah', 0, 1, 1, 1, 1, 1, '{}', 3),
+(232, 32, 'urus_ruta', 'number', 'Urus Ruta', 0, 1, 1, 1, 1, 1, '{}', 4),
+(233, 32, 'lainnya', 'number', 'Lainnya', 0, 1, 1, 1, 1, 1, '{}', 5),
+(234, 32, 'jumlah', 'number', 'Jumlah', 0, 1, 1, 1, 1, 1, '{}', 6),
+(235, 32, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 7),
+(236, 32, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 8),
+(237, 33, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
+(238, 33, 'lk', 'number', 'Lk', 0, 1, 1, 1, 1, 1, '{}', 2),
+(239, 33, 'pr', 'number', 'Pr', 0, 1, 1, 1, 1, 1, '{}', 3),
+(240, 33, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 4),
+(241, 33, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 5);
 
 -- --------------------------------------------------------
 
@@ -232,14 +306,23 @@ INSERT INTO `data_types` (`id`, `name`, `slug`, `display_name_singular`, `displa
 (10, 'pddk_mskn', 'pddk-mskn', 'Penduduk Miskin', 'Penduduk Miskin', NULL, 'App\\Models\\PddkMskn', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null}', '2022-11-09 05:01:22', '2022-11-09 05:01:22'),
 (11, 'tenaga_kerja', 'tenaga-kerja', 'Tenaga Kerja', 'Tenaga Kerja', 'voyager-archive', 'App\\Models\\TenagaKerja', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null}', '2022-11-09 05:26:52', '2022-11-09 05:26:52'),
 (12, 'tenaga_kerjas', 'tenaga-kerjas', 'Tenaga Kerja', 'Tenaga Kerja', 'voyager-archive', 'App\\Models\\TenagaKerja', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2022-11-09 05:56:47', '2022-11-09 05:59:01'),
-(13, 'pdrbs', 'pdrbs', 'PDRB', 'PDRB', NULL, 'App\\Models\\Pdrb', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null}', '2022-11-09 06:14:13', '2022-11-09 06:14:13'),
+(13, 'pdrbs', 'pdrbs', 'PDRB', 'PDRB', NULL, 'App\\Models\\Pdrb', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2022-11-09 06:14:13', '2022-11-26 09:09:09'),
 (15, 'penduduks', 'penduduks', 'Penduduk', 'Penduduk', 'voyager-people', 'App\\Models\\Penduduk', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null}', '2022-11-09 06:34:35', '2022-11-09 06:34:35'),
 (16, 'penduduk_kecamatans', 'penduduk-kecamatans', 'Penduduk Kecamatan', 'Penduduk Kecamatan', 'voyager-people', 'App\\Models\\PendudukKecamatan', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null}', '2022-11-09 06:44:42', '2022-11-09 06:44:42'),
 (17, 'inflasi_kotas', 'inflasi-kotas', 'Inflasi Kota', 'Inflasi Kota', 'voyager-dollar', 'App\\Models\\InflasiKota', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null}', '2022-11-09 06:51:43', '2022-11-09 06:51:43'),
 (18, 'ketimpangans', 'ketimpangans', 'Ketimpangan', 'Ketimpangan', 'voyager-params', 'App\\Models\\Ketimpangan', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null}', '2022-11-09 06:53:55', '2022-11-09 06:53:55'),
 (19, 'penganggurans', 'penganggurans', 'Pengangguran', 'Pengangguran', 'voyager-person', 'App\\Models\\Pengangguran', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null}', '2022-11-09 06:55:12', '2022-11-09 06:55:12'),
 (20, 'inflasis', 'inflasis', 'Inflasi', 'Inflasi', 'voyager-dollar', 'App\\Models\\Inflasi', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null}', '2022-11-09 21:46:59', '2022-11-09 21:46:59'),
-(21, 'pddk_mskns', 'pddk-mskns', 'Kemiskinan', 'Kemiskinan', 'voyager-people', 'App\\Models\\PddkMskn', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null}', '2022-11-09 22:47:00', '2022-11-09 22:47:00');
+(21, 'pddk_mskns', 'pddk-mskns', 'Kemiskinan', 'Kemiskinan', 'voyager-people', 'App\\Models\\PddkMskn', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null}', '2022-11-09 22:47:00', '2022-11-09 22:47:00'),
+(22, 'bkn_ang_kerja', 'bkn-ang-kerja', 'Bukan Angkatan Kerja', 'Bukan Angkatan Kerja', 'voyager-archive', 'App\\Models\\BknAngKerja', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2022-11-26 09:11:13', '2022-11-26 09:19:30'),
+(25, 'pddk_kerja_pendidikans', 'pddk-kerja-pendidikans', 'Penduduk Kerja Berdasarkan Pendidikan', 'Penduduk Kerja Berdasarkan Pendidikan', 'voyager-person', 'App\\Models\\PddkKerjaPendidikan', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null}', '2022-11-26 09:14:26', '2022-11-26 09:14:26'),
+(26, 'pddk_kerja_lpus', 'pddk-kerja-lpus', 'Pddk Kerja Lpu', 'Pddk Kerja LPU', 'voyager-people', 'App\\Models\\PddkKerjaLpu', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null}', '2022-11-26 09:15:03', '2022-11-26 09:15:03'),
+(28, 'pddk_kerja_umurs', 'pddk-kerja-umurs', 'Pddk Kerja Umur', 'Pddk Kerja Umur', NULL, 'App\\Models\\PddkKerjaUmur', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null}', '2022-11-26 09:16:03', '2022-11-26 09:16:03'),
+(29, 'tingkat_pengangguran_terbukas', 'tingkat-pengangguran-terbukas', 'Tingkat Pengangguran Terbuka', 'Tingkat Pengangguran Terbuka', 'voyager-person', 'App\\Models\\TingkatPengangguranTerbuka', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null}', '2022-11-26 09:16:31', '2022-11-26 09:16:31'),
+(30, 'tkk_jk', 'tkk-jk', 'Tingkat Kesempatan Kerja', 'Tingkat Kesempatan Kerja', 'voyager-archive', 'App\\Models\\TkkJk', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null}', '2022-11-26 09:17:47', '2022-11-26 09:17:47'),
+(31, 'sensus_pddks', 'sensus-pddks', 'Sensus Penduduk', 'Sensus Penduduk', 'voyager-people', 'App\\Models\\SensusPddk', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null}', '2022-11-26 09:19:08', '2022-11-26 09:19:08'),
+(32, 'bkn_ang_kerjas', 'bkn-ang-kerjas', 'Bkn Ang Kerja', 'Bukan Angkatan Kerja', 'voyager-people', 'App\\Models\\BknAngKerja', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null}', '2022-11-26 09:26:24', '2022-11-26 09:26:24'),
+(33, 'tkk_jks', 'tkk-jks', 'Tkk Jk', 'Tingkat Kesempatan Kerja', 'voyager-person', 'App\\Models\\TkkJk', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null}', '2022-11-26 10:56:15', '2022-11-26 10:56:15');
 
 -- --------------------------------------------------------
 
@@ -269,6 +352,7 @@ CREATE TABLE `inflasis` (
   `sembako` double DEFAULT NULL,
   `sandang` double DEFAULT NULL,
   `perumahan` double DEFAULT NULL,
+  `perlengkapan` double NOT NULL,
   `kesehatan` double DEFAULT NULL,
   `transportasi` double DEFAULT NULL,
   `informasi` double DEFAULT NULL,
@@ -285,8 +369,8 @@ CREATE TABLE `inflasis` (
 -- Dumping data for table `inflasis`
 --
 
-INSERT INTO `inflasis` (`id`, `kategori`, `sembako`, `sandang`, `perumahan`, `kesehatan`, `transportasi`, `informasi`, `rekreasi`, `pendidikan`, `penyedia_pangan`, `perawatan_pribadi`, `total`, `created_at`, `updated_at`) VALUES
-(1, 'andil_inflasi', 1.022, 0.989, 0.381, 0.803, 0.983, 0.938, 0.109, 0.092, 0.249, 0.098, 1, '2022-11-09 21:58:39', '2022-11-09 21:58:39');
+INSERT INTO `inflasis` (`id`, `kategori`, `sembako`, `sandang`, `perumahan`, `perlengkapan`, `kesehatan`, `transportasi`, `informasi`, `rekreasi`, `pendidikan`, `penyedia_pangan`, `perawatan_pribadi`, `total`, `created_at`, `updated_at`) VALUES
+(1, 'andil_inflasi', 1.022, 0.989, 0.381, 0.878, 0.803, 0.983, 0.938, 0.109, 0.092, 0.249, 0.098, 1, '2022-11-09 21:58:39', '2022-11-09 21:58:39');
 
 -- --------------------------------------------------------
 
@@ -347,20 +431,13 @@ INSERT INTO `ipms` (`id`, `uhh`, `rls`, `hls`, `ppp`, `ipm`, `pertumbuhan`, `cre
 
 CREATE TABLE `ketimpangans` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `pddk` varchar(150) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `rendah` double DEFAULT NULL,
+  `menengah` double DEFAULT NULL,
+  `tinggi` double DEFAULT NULL,
   `jumlah` double DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `ketimpangans`
---
-
-INSERT INTO `ketimpangans` (`id`, `pddk`, `jumlah`, `created_at`, `updated_at`) VALUES
-(1, 'rendah', 12301, '2022-11-09 22:17:07', '2022-11-09 22:17:07'),
-(2, 'sedang', 12309, '2022-11-09 22:17:19', '2022-11-09 22:17:19'),
-(3, 'tinggi', 93092, '2022-11-09 22:17:31', '2022-11-09 22:17:31');
 
 -- --------------------------------------------------------
 
@@ -410,27 +487,35 @@ CREATE TABLE `menu_items` (
 
 INSERT INTO `menu_items` (`id`, `menu_id`, `title`, `url`, `target`, `icon_class`, `color`, `parent_id`, `order`, `created_at`, `updated_at`, `route`, `parameters`) VALUES
 (1, 1, 'Dashboard', '', '_self', 'voyager-boat', NULL, NULL, 1, '2022-11-09 04:31:55', '2022-11-09 04:31:55', 'voyager.dashboard', NULL),
-(2, 1, 'Media', '', '_self', 'voyager-images', NULL, NULL, 5, '2022-11-09 04:31:55', '2022-11-09 21:47:57', 'voyager.media.index', NULL),
-(3, 1, 'Users', '', '_self', 'voyager-person', NULL, NULL, 4, '2022-11-09 04:31:55', '2022-11-09 21:47:57', 'voyager.users.index', NULL),
+(2, 1, 'Media', '', '_self', 'voyager-images', NULL, NULL, 5, '2022-11-09 04:31:55', '2022-11-26 09:26:56', 'voyager.media.index', NULL),
+(3, 1, 'Users', '', '_self', 'voyager-person', NULL, NULL, 4, '2022-11-09 04:31:55', '2022-11-26 09:23:13', 'voyager.users.index', NULL),
 (4, 1, 'Roles', '', '_self', 'voyager-lock', NULL, NULL, 3, '2022-11-09 04:31:55', '2022-11-09 21:47:57', 'voyager.roles.index', NULL),
-(5, 1, 'Tools', '', '_self', 'voyager-tools', NULL, NULL, 7, '2022-11-09 04:31:55', '2022-11-09 22:47:45', NULL, NULL),
-(6, 1, 'Menu Builder', '', '_self', 'voyager-list', NULL, 5, 5, '2022-11-09 04:31:55', '2022-11-09 06:55:51', 'voyager.menus.index', NULL),
-(7, 1, 'Database', '', '_self', 'voyager-data', NULL, 5, 1, '2022-11-09 04:31:55', '2022-11-09 05:12:44', 'voyager.database.index', NULL),
-(8, 1, 'Compass', '', '_self', 'voyager-compass', NULL, 5, 3, '2022-11-09 04:31:55', '2022-11-09 06:55:51', 'voyager.compass.index', NULL),
-(9, 1, 'BREAD', '', '_self', 'voyager-bread', NULL, 5, 4, '2022-11-09 04:31:55', '2022-11-09 06:55:51', 'voyager.bread.index', NULL),
-(10, 1, 'Settings', '', '_self', 'voyager-settings', NULL, 5, 2, '2022-11-09 04:31:55', '2022-11-09 06:55:51', 'voyager.settings.index', NULL),
-(13, 1, 'Pages', '', '_self', 'voyager-file-text', NULL, NULL, 6, '2022-11-09 04:31:56', '2022-11-09 21:47:57', 'voyager.pages.index', NULL),
+(5, 1, 'Tools', '', '_self', 'voyager-tools', NULL, NULL, 7, '2022-11-09 04:31:55', '2022-11-26 09:26:56', NULL, NULL),
+(6, 1, 'Menu Builder', '', '_self', 'voyager-list', NULL, 5, 5, '2022-11-09 04:31:55', '2022-11-26 09:22:58', 'voyager.menus.index', NULL),
+(7, 1, 'Database', '', '_self', 'voyager-data', NULL, 5, 1, '2022-11-09 04:31:55', '2022-11-26 09:22:58', 'voyager.database.index', NULL),
+(8, 1, 'Compass', '', '_self', 'voyager-compass', NULL, 5, 3, '2022-11-09 04:31:55', '2022-11-26 09:22:58', 'voyager.compass.index', NULL),
+(9, 1, 'BREAD', '', '_self', 'voyager-bread', NULL, 5, 4, '2022-11-09 04:31:55', '2022-11-26 09:22:58', 'voyager.bread.index', NULL),
+(10, 1, 'Settings', '', '_self', 'voyager-settings', NULL, 5, 2, '2022-11-09 04:31:55', '2022-11-26 09:22:58', 'voyager.settings.index', NULL),
+(13, 1, 'Pages', '', '_self', 'voyager-file-text', NULL, NULL, 6, '2022-11-09 04:31:56', '2022-11-26 09:26:56', 'voyager.pages.index', NULL),
 (18, 1, 'Data Input', '', '_self', 'voyager-news', '#000000', NULL, 2, '2022-11-09 05:12:31', '2022-11-09 05:15:23', NULL, ''),
-(19, 1, 'Ipm', '', '_self', 'voyager-bar-chart', '#000000', 18, 3, '2022-11-09 05:18:52', '2022-11-09 21:48:01', 'voyager.ipms.index', NULL),
-(21, 1, 'Tenaga Kerja', '', '_self', 'voyager-archive', NULL, 18, 10, '2022-11-09 05:56:47', '2022-11-09 21:47:57', 'voyager.tenaga-kerjas.index', NULL),
-(22, 1, 'PDRB', '', '_self', 'voyager-data', '#000000', 18, 9, '2022-11-09 06:14:13', '2022-11-09 21:47:57', 'voyager.pdrbs.index', 'null'),
-(24, 1, 'Penduduk', '', '_self', 'voyager-people', NULL, 18, 6, '2022-11-09 06:34:35', '2022-11-09 22:48:19', 'voyager.penduduks.index', NULL),
-(25, 1, 'Penduduk Kecamatan', '', '_self', 'voyager-people', NULL, 18, 7, '2022-11-09 06:44:42', '2022-11-09 22:48:19', 'voyager.penduduk-kecamatans.index', NULL),
-(26, 1, 'Inflasi Kota', '', '_self', 'voyager-dollar', NULL, 18, 2, '2022-11-09 06:51:43', '2022-11-09 21:48:01', 'voyager.inflasi-kotas.index', NULL),
-(27, 1, 'Ketimpangan', '', '_self', 'voyager-params', NULL, 18, 4, '2022-11-09 06:53:55', '2022-11-09 21:48:01', 'voyager.ketimpangans.index', NULL),
-(28, 1, 'Pengangguran', '', '_self', 'voyager-person', NULL, 18, 8, '2022-11-09 06:55:12', '2022-11-09 21:47:57', 'voyager.penganggurans.index', NULL),
-(29, 1, 'Inflasi', '', '_self', 'voyager-dollar', NULL, 18, 1, '2022-11-09 21:47:01', '2022-11-09 21:48:01', 'voyager.inflasis.index', NULL),
-(30, 1, 'Kemiskinan', '', '_self', 'voyager-people', NULL, 18, 5, '2022-11-09 22:47:00', '2022-11-09 22:48:19', 'voyager.pddk-mskns.index', NULL);
+(19, 1, 'Ipm', '', '_self', 'voyager-bar-chart', '#000000', 18, 4, '2022-11-09 05:18:52', '2022-11-26 09:27:02', 'voyager.ipms.index', NULL),
+(21, 1, 'Tenaga Kerja', '', '_self', 'voyager-archive', NULL, 18, 15, '2022-11-09 05:56:47', '2022-11-26 09:26:58', 'voyager.tenaga-kerjas.index', NULL),
+(22, 1, 'PDRB', '', '_self', 'voyager-data', '#000000', 18, 13, '2022-11-09 06:14:13', '2022-11-26 09:26:58', 'voyager.pdrbs.index', 'null'),
+(24, 1, 'Penduduk', '', '_self', 'voyager-people', NULL, 18, 7, '2022-11-09 06:34:35', '2022-11-26 09:27:02', 'voyager.penduduks.index', NULL),
+(25, 1, 'Penduduk Kecamatan', '', '_self', 'voyager-people', NULL, 18, 8, '2022-11-09 06:44:42', '2022-11-26 09:27:03', 'voyager.penduduk-kecamatans.index', NULL),
+(26, 1, 'Inflasi Kota', '', '_self', 'voyager-dollar', NULL, 18, 3, '2022-11-09 06:51:43', '2022-11-26 09:27:04', 'voyager.inflasi-kotas.index', NULL),
+(27, 1, 'Ketimpangan', '', '_self', 'voyager-params', NULL, 18, 5, '2022-11-09 06:53:55', '2022-11-26 09:27:02', 'voyager.ketimpangans.index', NULL),
+(28, 1, 'Pengangguran', '', '_self', 'voyager-person', NULL, 18, 12, '2022-11-09 06:55:12', '2022-11-26 09:26:58', 'voyager.penganggurans.index', NULL),
+(29, 1, 'Inflasi', '', '_self', 'voyager-dollar', NULL, 18, 2, '2022-11-09 21:47:01', '2022-11-26 09:27:04', 'voyager.inflasis.index', NULL),
+(30, 1, 'Kemiskinan', '', '_self', 'voyager-people', NULL, 18, 6, '2022-11-09 22:47:00', '2022-11-26 09:27:02', 'voyager.pddk-mskns.index', NULL),
+(32, 1, 'Penduduk Kerja Berdasarkan Pendidikan', '', '_self', 'voyager-person', NULL, 18, 9, '2022-11-26 09:14:27', '2022-11-26 09:27:00', 'voyager.pddk-kerja-pendidikans.index', NULL),
+(33, 1, 'Penduduk Kerja Lapangan Berdasarkan Pekerjaan Utama', '', '_self', 'voyager-people', '#000000', 18, 10, '2022-11-26 09:15:03', '2022-11-26 09:27:00', 'voyager.pddk-kerja-lpus.index', 'null'),
+(34, 1, 'Penduduk Kerja Berdasarkan Umur', '', '_self', 'voyager-people', '#000000', 18, 11, '2022-11-26 09:16:03', '2022-11-26 09:27:00', 'voyager.pddk-kerja-umurs.index', 'null'),
+(35, 1, 'Tingkat Pengangguran Terbuka', '', '_self', 'voyager-person', NULL, 18, 17, '2022-11-26 09:16:31', '2022-11-26 09:26:56', 'voyager.tingkat-pengangguran-terbukas.index', NULL),
+(36, 1, 'Tingkat Kesempatan Kerja', '', '_self', 'voyager-archive', NULL, 18, 16, '2022-11-26 09:17:47', '2022-11-26 09:26:58', 'voyager.tkk-jk.index', NULL),
+(37, 1, 'Sensus Penduduk', '', '_self', 'voyager-people', NULL, 18, 14, '2022-11-26 09:19:08', '2022-11-26 09:26:58', 'voyager.sensus-pddks.index', NULL),
+(38, 1, 'Bukan Angkatan Kerja', '', '_self', 'voyager-people', NULL, 18, 1, '2022-11-26 09:26:25', '2022-11-26 09:27:03', 'voyager.bkn-ang-kerjas.index', NULL),
+(39, 1, 'Tingkat Kesempatan Kerja', '', '_self', 'voyager-person', NULL, NULL, 8, '2022-11-26 10:56:16', '2022-11-26 10:56:16', 'voyager.tkk-jks.index', NULL);
 
 -- --------------------------------------------------------
 
@@ -521,6 +606,58 @@ CREATE TABLE `password_resets` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `pddk_kerja_lpus`
+--
+
+CREATE TABLE `pddk_kerja_lpus` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `gender` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `pertanian` double DEFAULT NULL,
+  `industri` double DEFAULT NULL,
+  `jasa` double DEFAULT NULL,
+  `jumlah` double DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pddk_kerja_pendidikans`
+--
+
+CREATE TABLE `pddk_kerja_pendidikans` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `gender` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `sd` double DEFAULT NULL,
+  `smp` double DEFAULT NULL,
+  `sma` double DEFAULT NULL,
+  `perguruan_tinggi` double DEFAULT NULL,
+  `jumlah` double DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pddk_kerja_umurs`
+--
+
+CREATE TABLE `pddk_kerja_umurs` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `gender` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `a` double DEFAULT NULL,
+  `b` double DEFAULT NULL,
+  `c` double DEFAULT NULL,
+  `total` double DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `pddk_mskns`
 --
 
@@ -566,6 +703,14 @@ CREATE TABLE `pdrbs` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `pdrbs`
+--
+
+INSERT INTO `pdrbs` (`id`, `kategori`, `a`, `b`, `c`, `d`, `e`, `f`, `g`, `h`, `i`, `j`, `k`, `l`, `m_n`, `o`, `p`, `q`, `r_s_t_u`, `total`, `created_at`, `updated_at`) VALUES
+(1, 'migas', 0.132, 0.321, 0.432, 0.893, 0.983, 1.329, 0.323, 0.092, 0.983, 0.812, 1.931, 0.293, 0.381, 0.481, 1.394, 0.298, 0.328, 1.932, '2022-11-22 01:58:49', '2022-11-22 01:58:49'),
+(2, 'non_migas', 0.212, 0.098, 0.123, 0.093, 0.432, 0.391, 0.192, 0.391, 0.494, 0.391, 0.293, 0.913, 0.819, 0.39, 0.381, 0.481, 0.381, 1.103, '2022-11-22 05:25:28', '2022-11-22 05:25:28');
+
 -- --------------------------------------------------------
 
 --
@@ -574,6 +719,7 @@ CREATE TABLE `pdrbs` (
 
 CREATE TABLE `penduduks` (
   `id` int(10) UNSIGNED NOT NULL,
+  `gender` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `a` int(11) DEFAULT NULL,
   `b` int(11) DEFAULT NULL,
   `c` int(11) DEFAULT NULL,
@@ -599,8 +745,8 @@ CREATE TABLE `penduduks` (
 -- Dumping data for table `penduduks`
 --
 
-INSERT INTO `penduduks` (`id`, `a`, `b`, `c`, `d`, `e`, `f`, `g`, `h`, `i`, `j`, `k`, `l`, `m`, `n`, `o`, `p`, `total`, `created_at`, `updated_at`) VALUES
-(1, 12039, 221098, 9821, 10982, 109842, 93, 1219, 1982, 9127, 9182, 98217, 3912, 19827, 19827, 981, 19827, 293840, '2022-11-09 22:19:23', '2022-11-09 22:19:23');
+INSERT INTO `penduduks` (`id`, `gender`, `a`, `b`, `c`, `d`, `e`, `f`, `g`, `h`, `i`, `j`, `k`, `l`, `m`, `n`, `o`, `p`, `total`, `created_at`, `updated_at`) VALUES
+(1, NULL, 12039, 221098, 9821, 10982, 109842, 93, 1219, 1982, 9127, 9182, 98217, 3912, 19827, 19827, 981, 19827, 293840, '2022-11-09 22:19:23', '2022-11-09 22:19:23');
 
 -- --------------------------------------------------------
 
@@ -748,7 +894,52 @@ INSERT INTO `permissions` (`id`, `key`, `table_name`, `created_at`, `updated_at`
 (102, 'read_pddk_mskns', 'pddk_mskns', '2022-11-09 22:47:00', '2022-11-09 22:47:00'),
 (103, 'edit_pddk_mskns', 'pddk_mskns', '2022-11-09 22:47:00', '2022-11-09 22:47:00'),
 (104, 'add_pddk_mskns', 'pddk_mskns', '2022-11-09 22:47:00', '2022-11-09 22:47:00'),
-(105, 'delete_pddk_mskns', 'pddk_mskns', '2022-11-09 22:47:00', '2022-11-09 22:47:00');
+(105, 'delete_pddk_mskns', 'pddk_mskns', '2022-11-09 22:47:00', '2022-11-09 22:47:00'),
+(106, 'browse_bkn_ang_kerja', 'bkn_ang_kerja', '2022-11-26 09:11:13', '2022-11-26 09:11:13'),
+(107, 'read_bkn_ang_kerja', 'bkn_ang_kerja', '2022-11-26 09:11:13', '2022-11-26 09:11:13'),
+(108, 'edit_bkn_ang_kerja', 'bkn_ang_kerja', '2022-11-26 09:11:13', '2022-11-26 09:11:13'),
+(109, 'add_bkn_ang_kerja', 'bkn_ang_kerja', '2022-11-26 09:11:13', '2022-11-26 09:11:13'),
+(110, 'delete_bkn_ang_kerja', 'bkn_ang_kerja', '2022-11-26 09:11:13', '2022-11-26 09:11:13'),
+(111, 'browse_pddk_kerja_pendidikans', 'pddk_kerja_pendidikans', '2022-11-26 09:14:27', '2022-11-26 09:14:27'),
+(112, 'read_pddk_kerja_pendidikans', 'pddk_kerja_pendidikans', '2022-11-26 09:14:27', '2022-11-26 09:14:27'),
+(113, 'edit_pddk_kerja_pendidikans', 'pddk_kerja_pendidikans', '2022-11-26 09:14:27', '2022-11-26 09:14:27'),
+(114, 'add_pddk_kerja_pendidikans', 'pddk_kerja_pendidikans', '2022-11-26 09:14:27', '2022-11-26 09:14:27'),
+(115, 'delete_pddk_kerja_pendidikans', 'pddk_kerja_pendidikans', '2022-11-26 09:14:27', '2022-11-26 09:14:27'),
+(116, 'browse_pddk_kerja_lpus', 'pddk_kerja_lpus', '2022-11-26 09:15:03', '2022-11-26 09:15:03'),
+(117, 'read_pddk_kerja_lpus', 'pddk_kerja_lpus', '2022-11-26 09:15:03', '2022-11-26 09:15:03'),
+(118, 'edit_pddk_kerja_lpus', 'pddk_kerja_lpus', '2022-11-26 09:15:03', '2022-11-26 09:15:03'),
+(119, 'add_pddk_kerja_lpus', 'pddk_kerja_lpus', '2022-11-26 09:15:03', '2022-11-26 09:15:03'),
+(120, 'delete_pddk_kerja_lpus', 'pddk_kerja_lpus', '2022-11-26 09:15:03', '2022-11-26 09:15:03'),
+(121, 'browse_pddk_kerja_umurs', 'pddk_kerja_umurs', '2022-11-26 09:16:03', '2022-11-26 09:16:03'),
+(122, 'read_pddk_kerja_umurs', 'pddk_kerja_umurs', '2022-11-26 09:16:03', '2022-11-26 09:16:03'),
+(123, 'edit_pddk_kerja_umurs', 'pddk_kerja_umurs', '2022-11-26 09:16:03', '2022-11-26 09:16:03'),
+(124, 'add_pddk_kerja_umurs', 'pddk_kerja_umurs', '2022-11-26 09:16:03', '2022-11-26 09:16:03'),
+(125, 'delete_pddk_kerja_umurs', 'pddk_kerja_umurs', '2022-11-26 09:16:03', '2022-11-26 09:16:03'),
+(126, 'browse_tingkat_pengangguran_terbukas', 'tingkat_pengangguran_terbukas', '2022-11-26 09:16:31', '2022-11-26 09:16:31'),
+(127, 'read_tingkat_pengangguran_terbukas', 'tingkat_pengangguran_terbukas', '2022-11-26 09:16:31', '2022-11-26 09:16:31'),
+(128, 'edit_tingkat_pengangguran_terbukas', 'tingkat_pengangguran_terbukas', '2022-11-26 09:16:31', '2022-11-26 09:16:31'),
+(129, 'add_tingkat_pengangguran_terbukas', 'tingkat_pengangguran_terbukas', '2022-11-26 09:16:31', '2022-11-26 09:16:31'),
+(130, 'delete_tingkat_pengangguran_terbukas', 'tingkat_pengangguran_terbukas', '2022-11-26 09:16:31', '2022-11-26 09:16:31'),
+(131, 'browse_tkk_jk', 'tkk_jk', '2022-11-26 09:17:47', '2022-11-26 09:17:47'),
+(132, 'read_tkk_jk', 'tkk_jk', '2022-11-26 09:17:47', '2022-11-26 09:17:47'),
+(133, 'edit_tkk_jk', 'tkk_jk', '2022-11-26 09:17:47', '2022-11-26 09:17:47'),
+(134, 'add_tkk_jk', 'tkk_jk', '2022-11-26 09:17:47', '2022-11-26 09:17:47'),
+(135, 'delete_tkk_jk', 'tkk_jk', '2022-11-26 09:17:47', '2022-11-26 09:17:47'),
+(136, 'browse_sensus_pddks', 'sensus_pddks', '2022-11-26 09:19:08', '2022-11-26 09:19:08'),
+(137, 'read_sensus_pddks', 'sensus_pddks', '2022-11-26 09:19:08', '2022-11-26 09:19:08'),
+(138, 'edit_sensus_pddks', 'sensus_pddks', '2022-11-26 09:19:08', '2022-11-26 09:19:08'),
+(139, 'add_sensus_pddks', 'sensus_pddks', '2022-11-26 09:19:08', '2022-11-26 09:19:08'),
+(140, 'delete_sensus_pddks', 'sensus_pddks', '2022-11-26 09:19:08', '2022-11-26 09:19:08'),
+(141, 'browse_bkn_ang_kerjas', 'bkn_ang_kerjas', '2022-11-26 09:26:24', '2022-11-26 09:26:24'),
+(142, 'read_bkn_ang_kerjas', 'bkn_ang_kerjas', '2022-11-26 09:26:24', '2022-11-26 09:26:24'),
+(143, 'edit_bkn_ang_kerjas', 'bkn_ang_kerjas', '2022-11-26 09:26:24', '2022-11-26 09:26:24'),
+(144, 'add_bkn_ang_kerjas', 'bkn_ang_kerjas', '2022-11-26 09:26:24', '2022-11-26 09:26:24'),
+(145, 'delete_bkn_ang_kerjas', 'bkn_ang_kerjas', '2022-11-26 09:26:25', '2022-11-26 09:26:25'),
+(146, 'browse_tkk_jks', 'tkk_jks', '2022-11-26 10:56:16', '2022-11-26 10:56:16'),
+(147, 'read_tkk_jks', 'tkk_jks', '2022-11-26 10:56:16', '2022-11-26 10:56:16'),
+(148, 'edit_tkk_jks', 'tkk_jks', '2022-11-26 10:56:16', '2022-11-26 10:56:16'),
+(149, 'add_tkk_jks', 'tkk_jks', '2022-11-26 10:56:16', '2022-11-26 10:56:16'),
+(150, 'delete_tkk_jks', 'tkk_jks', '2022-11-26 10:56:16', '2022-11-26 10:56:16');
 
 -- --------------------------------------------------------
 
@@ -855,7 +1046,52 @@ INSERT INTO `permission_role` (`permission_id`, `role_id`) VALUES
 (102, 1),
 (103, 1),
 (104, 1),
-(105, 1);
+(105, 1),
+(106, 1),
+(107, 1),
+(108, 1),
+(109, 1),
+(110, 1),
+(111, 1),
+(112, 1),
+(113, 1),
+(114, 1),
+(115, 1),
+(116, 1),
+(117, 1),
+(118, 1),
+(119, 1),
+(120, 1),
+(121, 1),
+(122, 1),
+(123, 1),
+(124, 1),
+(125, 1),
+(126, 1),
+(127, 1),
+(128, 1),
+(129, 1),
+(130, 1),
+(131, 1),
+(132, 1),
+(133, 1),
+(134, 1),
+(135, 1),
+(136, 1),
+(137, 1),
+(138, 1),
+(139, 1),
+(140, 1),
+(141, 1),
+(142, 1),
+(143, 1),
+(144, 1),
+(145, 1),
+(146, 1),
+(147, 1),
+(148, 1),
+(149, 1),
+(150, 1);
 
 -- --------------------------------------------------------
 
@@ -901,6 +1137,28 @@ INSERT INTO `roles` (`id`, `name`, `display_name`, `created_at`, `updated_at`) V
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `sensus_pddks`
+--
+
+CREATE TABLE `sensus_pddks` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `kategori` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `lk` int(11) DEFAULT NULL,
+  `pr` int(11) DEFAULT NULL,
+  `jumlah` int(11) DEFAULT NULL,
+  `post_gen_z` int(11) DEFAULT NULL,
+  `gen_z` int(11) DEFAULT NULL,
+  `milenial` int(11) DEFAULT NULL,
+  `gen_x` int(11) DEFAULT NULL,
+  `baby_boomer` int(11) DEFAULT NULL,
+  `pre_boomer` int(11) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `settings`
 --
 
@@ -940,14 +1198,16 @@ INSERT INTO `settings` (`id`, `key`, `display_name`, `value`, `details`, `type`,
 CREATE TABLE `tenaga_kerjas` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `angkatan_kerja` double DEFAULT NULL,
+  `bekerja` double DEFAULT NULL,
   `pengangguran` double DEFAULT NULL,
   `bkn_angkatan_kerja` double DEFAULT NULL,
   `sekolah` double DEFAULT NULL,
   `urus_ruta` double DEFAULT NULL,
+  `lainnya` double DEFAULT NULL,
+  `total` double DEFAULT NULL,
   `tpak` double DEFAULT NULL,
   `tkk` double DEFAULT NULL,
   `tpt` double DEFAULT NULL,
-  `lainnya` double DEFAULT NULL,
   `gender` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -957,8 +1217,37 @@ CREATE TABLE `tenaga_kerjas` (
 -- Dumping data for table `tenaga_kerjas`
 --
 
-INSERT INTO `tenaga_kerjas` (`id`, `angkatan_kerja`, `pengangguran`, `bkn_angkatan_kerja`, `sekolah`, `urus_ruta`, `tpak`, `tkk`, `tpt`, `lainnya`, `gender`, `created_at`, `updated_at`) VALUES
-(1, 10.21, 102.12, 0.911, 0.01239, 0.394, 0.219, 0.129, 0.399, 1.982, 'lk', '2022-11-09 05:59:53', '2022-11-09 05:59:53');
+INSERT INTO `tenaga_kerjas` (`id`, `angkatan_kerja`, `bekerja`, `pengangguran`, `bkn_angkatan_kerja`, `sekolah`, `urus_ruta`, `lainnya`, `total`, `tpak`, `tkk`, `tpt`, `gender`, `created_at`, `updated_at`) VALUES
+(1, 10.21, 0, 102.12, 0.911, 0.01239, 0.394, 0, 0, 0.219, 0.129, 0.399, 'lk', '2022-11-09 05:59:53', '2022-11-09 05:59:53');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tingkat_pengangguran_terbukas`
+--
+
+CREATE TABLE `tingkat_pengangguran_terbukas` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `lk` double DEFAULT NULL,
+  `pr` double DEFAULT NULL,
+  `jumlah` double DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tkk_jks`
+--
+
+CREATE TABLE `tkk_jks` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `lk` double DEFAULT NULL,
+  `pr` double DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -1038,7 +1327,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `role_id`, `name`, `email`, `avatar`, `email_verified_at`, `password`, `remember_token`, `settings`, `created_at`, `updated_at`) VALUES
-(1, 1, 'Admin', 'admin@admin.com', 'users/default.png', NULL, '$2y$10$y62HKafjVYnO7wHUZdwPb.T.44oCnDzPgDxyIz.pGkCZnddcuUnxm', 'fZqRAnaafsoPEu1rJVlEoAarY3hhvXTtGSIkIXXfqvob0berd72OT1HVunr2', NULL, '2022-11-09 04:31:56', '2022-11-09 04:31:56');
+(1, 1, 'Admin', 'admin@admin.com', 'users/default.png', NULL, '$2y$10$y62HKafjVYnO7wHUZdwPb.T.44oCnDzPgDxyIz.pGkCZnddcuUnxm', 'cxfjF67r9k55uZDBDLkzSYKG0crKNVVEXIqro3xpHsAK0wtw9h8aSmlJ4Vgm', NULL, '2022-11-09 04:31:56', '2022-11-09 04:31:56');
 
 -- --------------------------------------------------------
 
@@ -1054,6 +1343,12 @@ CREATE TABLE `user_roles` (
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `bkn_ang_kerjas`
+--
+ALTER TABLE `bkn_ang_kerjas`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `data_rows`
@@ -1135,6 +1430,24 @@ ALTER TABLE `password_resets`
   ADD KEY `password_resets_email_index` (`email`);
 
 --
+-- Indexes for table `pddk_kerja_lpus`
+--
+ALTER TABLE `pddk_kerja_lpus`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `pddk_kerja_pendidikans`
+--
+ALTER TABLE `pddk_kerja_pendidikans`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `pddk_kerja_umurs`
+--
+ALTER TABLE `pddk_kerja_umurs`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `pddk_mskns`
 --
 ALTER TABLE `pddk_mskns`
@@ -1195,6 +1508,12 @@ ALTER TABLE `roles`
   ADD UNIQUE KEY `roles_name_unique` (`name`);
 
 --
+-- Indexes for table `sensus_pddks`
+--
+ALTER TABLE `sensus_pddks`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `settings`
 --
 ALTER TABLE `settings`
@@ -1205,6 +1524,18 @@ ALTER TABLE `settings`
 -- Indexes for table `tenaga_kerjas`
 --
 ALTER TABLE `tenaga_kerjas`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tingkat_pengangguran_terbukas`
+--
+ALTER TABLE `tingkat_pengangguran_terbukas`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tkk_jks`
+--
+ALTER TABLE `tkk_jks`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -1235,16 +1566,22 @@ ALTER TABLE `user_roles`
 --
 
 --
+-- AUTO_INCREMENT for table `bkn_ang_kerjas`
+--
+ALTER TABLE `bkn_ang_kerjas`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `data_rows`
 --
 ALTER TABLE `data_rows`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=185;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=242;
 
 --
 -- AUTO_INCREMENT for table `data_types`
 --
 ALTER TABLE `data_types`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -1286,7 +1623,7 @@ ALTER TABLE `menus`
 -- AUTO_INCREMENT for table `menu_items`
 --
 ALTER TABLE `menu_items`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 
 --
 -- AUTO_INCREMENT for table `migrations`
@@ -1301,6 +1638,24 @@ ALTER TABLE `pages`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT for table `pddk_kerja_lpus`
+--
+ALTER TABLE `pddk_kerja_lpus`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `pddk_kerja_pendidikans`
+--
+ALTER TABLE `pddk_kerja_pendidikans`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `pddk_kerja_umurs`
+--
+ALTER TABLE `pddk_kerja_umurs`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `pddk_mskns`
 --
 ALTER TABLE `pddk_mskns`
@@ -1310,7 +1665,7 @@ ALTER TABLE `pddk_mskns`
 -- AUTO_INCREMENT for table `pdrbs`
 --
 ALTER TABLE `pdrbs`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `penduduks`
@@ -1334,7 +1689,7 @@ ALTER TABLE `penganggurans`
 -- AUTO_INCREMENT for table `permissions`
 --
 ALTER TABLE `permissions`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=106;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=151;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`
@@ -1349,6 +1704,12 @@ ALTER TABLE `roles`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
+-- AUTO_INCREMENT for table `sensus_pddks`
+--
+ALTER TABLE `sensus_pddks`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `settings`
 --
 ALTER TABLE `settings`
@@ -1359,6 +1720,18 @@ ALTER TABLE `settings`
 --
 ALTER TABLE `tenaga_kerjas`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `tingkat_pengangguran_terbukas`
+--
+ALTER TABLE `tingkat_pengangguran_terbukas`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `tkk_jks`
+--
+ALTER TABLE `tkk_jks`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `translations`
